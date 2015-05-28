@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.objectfrontier.sms.dao.MessageDao">
+
+	<insert id='persistMessage' parameterType='Message' useGeneratedKeys='false'>
+		INSERT INTO message(number, message, externalId)
+		VALUES(#{number}, #{message}, #{externalId})
+	</insert>
+
+	<!-- <update id='persistMessageStatus' parameterType='Message'>
+		UPDATE USER
+		SET
+		PASSWORD= #{password},
+		FIRST_NAME = #{firstName},
+		LAST_NAME = #{lastName}
+		WHERE USER_ID = #{userId}
+	</update> -->
+</mapper>
